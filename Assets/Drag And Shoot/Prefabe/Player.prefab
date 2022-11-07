@@ -68,8 +68,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 610141121
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Positions:
   - {x: 9.413093, y: 1.1512411, z: 0}
@@ -166,14 +166,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3829704880250839195}
   - component: {fileID: 3829704880250839192}
+  - component: {fileID: 1564531818}
   - component: {fileID: 3829704880250839194}
   - component: {fileID: 3829704880250839188}
   - component: {fileID: 3829704880250839193}
   - component: {fileID: 940665517}
-  - component: {fileID: 1564531818}
   - component: {fileID: 1564531824}
+  - component: {fileID: 4513724081843696154}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 3829704880250839191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 3829704879204061266}
   m_Father: {fileID: 0}
@@ -212,6 +213,22 @@ MonoBehaviour:
   shootWhileMoving: 1
   forwardDraging: 0
   showLineOnScreen: 1
+--- !u!70 &1564531818
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829704880250839191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.012401327, y: -0.14812128}
+  m_Size: {x: 1.072669, y: 0.30117282}
+  m_Direction: 1
 --- !u!212 &3829704880250839194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -249,10 +266,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 610141121
+  m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7bdee1e32435777479d592f04ef22184, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad8313c92fd94a041a2d72984d04744e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -356,7 +373,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.033018887, g: 0.55704457, b: 1, a: 1}
+      key0: {r: 1, g: 0.16075294, b: 0.031372547, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -429,10 +446,10 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 610141121
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Time: 0.4
+  m_Time: 0.3
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -441,7 +458,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.3388443
+        value: 0.2993698
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -449,22 +466,22 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.84751606
+        time: 1
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.41788748
+        outSlope: -0.41788748
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.23090273
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0.6754477, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 0}
-      key2: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 1, g: 0.6144983, b: 0, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0.34509805}
+      key2: {r: 0, g: 0, b: 0, a: 0.20784314}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -478,9 +495,9 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 41827
+      atime0: 0
       atime1: 65535
-      atime2: 0
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -498,22 +515,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!70 &1564531818
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3829704880250839191}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0066019557, y: -0.013204731}
-  m_Size: {x: 0.31340346, y: 0.16814938}
-  m_Direction: 1
 --- !u!114 &1564531824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,3 +561,22 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &4513724081843696154
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829704880250839191}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4944619cbf6fa80499ebd928883afb30, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
