@@ -246,7 +246,6 @@ public class DragAndShoot : MonoBehaviour
         line.SetPosition(1, targetPosition);
     }
 
-    Vector3[] positions;
 
 
 }
