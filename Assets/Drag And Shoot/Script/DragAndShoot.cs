@@ -61,6 +61,8 @@ public class DragAndShoot : MonoBehaviour
         if (shouldContinue)
         {
             MouseDrag();
+
+            if (shootWhileMoving) rb.velocity /= (1 + slowMotion);
         }
         //if (Input.GetMouseButtonDown(0))
         //{

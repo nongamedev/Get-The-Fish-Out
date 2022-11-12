@@ -101,7 +101,7 @@ namespace EZCameraShake
             else
                 tick += Time.deltaTime * Roughness * roughMod * currentFadeTime;
 
-            return amt * Magnitude * magnMod * currentFadeTime;
+            return Magnitude * magnMod * currentFadeTime * amt;
         }
 
         /// <summary>
