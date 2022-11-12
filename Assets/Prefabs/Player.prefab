@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 8487007606331273094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.4, y: 5, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2.2, y: 2.6, z: 1}
   m_Children:
   - {fileID: 8487007607432568643}
   m_Father: {fileID: 0}
@@ -53,10 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPower: 25
   gravity: 1
-  slowMotion: 0.02
+  slowMotion: 0.1
   shootWhileMoving: 1
   forwardDraging: 0
-  showLineOnScreen: 1
+  showLineOnScreen: 0
 --- !u!50 &8487007606331273093
 Rigidbody2D:
   serializedVersion: 4
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_SortingLayerID: 610141121
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ad8313c92fd94a041a2d72984d04744e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e5014124002d544dbfc89b649a7ebde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
