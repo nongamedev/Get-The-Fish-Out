@@ -51,12 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5ddb281792687438da3aad8d987636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 25
+  maxPower: 20
   gravity: 1
   slowMotion: 0.1
   shootWhileMoving: 1
   forwardDraging: 0
-  showLineOnScreen: 0
+  showLineOnScreen: 1
 --- !u!50 &8487007606331273093
 Rigidbody2D:
   serializedVersion: 4
