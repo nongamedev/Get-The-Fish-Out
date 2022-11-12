@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     private AudioSource audioSource;
 
     private Story currentStory;
-    public bool dialogueIsPlaying { get; private set; }
+    public bool DialogueIsPlaying { get; private set; }
 
     private bool canContinueToNextLine = false;
 
@@ -66,17 +66,17 @@ public class DialogueManager : MonoBehaviour
 
         audioSource = this.gameObject.AddComponent<AudioSource>();
         currentAudioInfo = defaultAudioInfo;
-        
+
     }
 
     public void ExitDialogue()
     {
-        dialogueIsPlaying = false;
+        DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
     }
     private void Start()
     {
-        dialogueIsPlaying = false;
+        DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
         // get the layout animator
@@ -97,14 +97,16 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // return right away if dialogue isn't playing
-        if (!dialogueIsPlaying)
+        if (!DialogueIsPlaying)
         {
-            GameManager.Instance.hud.transform.GetChild(0).gameObject.SetActive(true);
+            //Enable Player Bag, old
+            //GameManager.Instance.hud.transform.GetChild(0).gameObject.SetActive(true);
             return;
         }
         else
         {
-            GameManager.Instance.hud.transform.GetChild(0).gameObject.SetActive(false);
+            // Disable Player Bag, old
+            //GameManager.Instance.hud.transform.GetChild(0).gameObject.SetActive(false);
         }
 
         // handle continuing to the next line in the dialogue when submit is pressed
@@ -145,7 +147,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
-        dialogueIsPlaying = true;
+        DialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
         dialogueVariables.StartListening(currentStory);
@@ -164,7 +166,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueVariables.StopListening(currentStory);
 
-        dialogueIsPlaying = false;
+        DialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
 
@@ -371,8 +373,10 @@ public class DialogueManager : MonoBehaviour
     {
         // Event System requires we clear it first, then wait
         // for at least one frame before we set the current selected object.
+
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
+
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
     }
 

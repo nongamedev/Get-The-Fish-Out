@@ -8,7 +8,7 @@ public class PressToTriggerDialogue : TriggerDialogue
     
     private void Update() 
     {
-        if (playerInRange && !DialogueManager.Instance.dialogueIsPlaying) 
+        if (playerInRange && !DialogueManager.Instance.DialogueIsPlaying) 
         {
             visualCue.SetActive(true);
             if (InputManager.Instance.GetInteractPressed())
