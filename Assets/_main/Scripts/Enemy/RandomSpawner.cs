@@ -7,7 +7,7 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] float timer = 3f;
     float elapsed;
     [SerializeField] Transform playerTransform;
-    [SerializeField] float yOffset =25f;
+    [SerializeField] float yOffsetToPlayer =25f;
 
     void Update()
     {
@@ -19,7 +19,7 @@ public class RandomSpawner : MonoBehaviour
             int _randEnemy = Random.Range(0, prefabs.Length);
             int _randSpawnpoint = Random.Range(0, spawnpoints.Length);
 
-            Instantiate(prefabs[_randEnemy], new Vector3(spawnpoints[_randSpawnpoint].position.x, playerTransform.position.y + yOffset, spawnpoints[_randSpawnpoint].position.z), transform.rotation);
+            Instantiate(prefabs[_randEnemy], new Vector3(spawnpoints[_randSpawnpoint].position.x, playerTransform.position.y + yOffsetToPlayer, spawnpoints[_randSpawnpoint].position.z), transform.rotation);
         }
     }
 
