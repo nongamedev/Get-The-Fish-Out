@@ -3,6 +3,7 @@ using UnityEngine;
 public class MultiPoolRandomSpawner : MonoBehaviour
 {
     [SerializeField] Transform[] spawnpoints;
+    //Need solutions to improve this part
     [SerializeField] GameObject[] prefabs;
     [SerializeField] float timer = 3f;
     float elapsed;
@@ -15,7 +16,7 @@ public class MultiPoolRandomSpawner : MonoBehaviour
         if (elapsed >= timer)
         {
             elapsed = 0f;
-
+            //Improve this part
             int _randEnemyID = Random.Range(0, prefabs.Length);
             int _randSpawnpoint = Random.Range(0, spawnpoints.Length);
 
