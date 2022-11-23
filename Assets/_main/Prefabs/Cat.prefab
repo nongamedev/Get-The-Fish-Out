@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 5792266837209106426}
   - component: {fileID: 5792266837209106425}
   - component: {fileID: 6647273745110251508}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5792266837209106424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.22, y: 8.38, z: 0}
-  m_LocalScale: {x: 3.6, y: 3.6, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 8989594047294703138}
   m_Father: {fileID: 0}
@@ -90,15 +90,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.5
+  m_GravityScale: 0.45
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &5499112336978780335
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.074700914, y: 0.061422348}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 245765319262944200}
   - component: {fileID: 8708313164134397380}
   - component: {fileID: 2139220379855726462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cat_attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

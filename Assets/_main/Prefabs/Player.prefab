@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 9097772747683855627}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5ddb281792687438da3aad8d987636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 20
+  maxPower: 25
   gravity: 1
   slowMotion: 0.1
   shootWhileMoving: 1
