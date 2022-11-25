@@ -3,23 +3,31 @@ using UnityEngine;
 // In this example, we have a Particle System emitting green particles; we then emit and override some properties every 2 seconds.
 public class BulletHellSpawner : MonoBehaviour
 {
-    [SerializeField] private int numberOfColumns;
+    [SerializeField] ParticleSystem system;
 
-    [SerializeField] private float speed;
+    [SerializeField] int emitCount = 1;
 
-    [SerializeField] private Sprite sprite;
+    [SerializeField] int numberOfColumns = 1;
 
-    [SerializeField] private Color color;
+    [SerializeField] float bulletFireRate = 1;
 
-    [SerializeField] private float lifeTime;
+    [SerializeField] float bulletSpinSpeed;
 
-    [SerializeField] private float fireRate;
+    [SerializeField] float bulletSpeed = 5;
 
-    [SerializeField] private float size;
+    [SerializeField] float bulletLifeTime = 5;
 
-    [SerializeField] private Material material;
+    [SerializeField] float bulletSize = 2;
 
-    [SerializeField] private ParticleSystem system;
+    [SerializeField] Color color = Color.white;
+
+    [SerializeField] Material material;
+
+    [SerializeField] Sprite[] sprites;
+
+    [SerializeField] int animationCycleCount = 4;
+
+    int maxParticles = 9999999;
 
     private float angle;
 
@@ -27,13 +35,19 @@ public class BulletHellSpawner : MonoBehaviour
     {
         GenerateBulletHell();
     }
+
+    private void FixedUpdate()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, bulletSpinSpeed * Time.fixedTime);
+    }
     void GenerateBulletHell()
     {
         angle = 360 / numberOfColumns;
+
         for (int i = 0; i < numberOfColumns; i++)
         {
-            // A simple particle material with no texture.
-            Material particleMaterial = material;
+            //// A simple particle material with no texture.
+            //Material particleMaterial = material;
 
             // Create a green Particle System.
             var go = new GameObject("Particle System");
@@ -43,11 +57,15 @@ public class BulletHellSpawner : MonoBehaviour
             go.transform.position = transform.position;
 
             system = go.AddComponent<ParticleSystem>();
-            go.GetComponent<ParticleSystemRenderer>().material = particleMaterial;
+            go.GetComponent<ParticleSystemRenderer>().material = material;
+
             var mainModule = system.main;
-            mainModule.startColor = Color.green;
-            mainModule.startSize = 0.5f;
-            mainModule.startSpeed = speed;
+            mainModule.startColor = color;
+            mainModule.startSize = bulletSize;
+            mainModule.startLifetime = bulletLifeTime;
+            mainModule.startSpeed = bulletSpeed;
+            mainModule.maxParticles = maxParticles;
+            mainModule.simulationSpace = ParticleSystemSimulationSpace.World;
 
             var emission = system.emission;
             emission.enabled = false;
@@ -60,10 +78,14 @@ public class BulletHellSpawner : MonoBehaviour
             var texture = system.textureSheetAnimation;
             texture.enabled = true;
             texture.mode = ParticleSystemAnimationMode.Sprites;
-            texture.AddSprite(sprite);
+            texture.cycleCount = animationCycleCount;
+            for (int sprite = 0; sprite < sprites.Length; sprite++)
+            {
+                texture.AddSprite(sprites[sprite]);
+            }
         }
         // Every 2 secs we will emit.
-        InvokeRepeating(nameof(DoEmit), 0f, fireRate);
+        InvokeRepeating(nameof(DoEmit), 0f, bulletFireRate);
     }
 
     void DoEmit()
@@ -71,16 +93,18 @@ public class BulletHellSpawner : MonoBehaviour
         foreach (Transform child in transform)
         {
             system = child.GetComponent<ParticleSystem>();
+
+            //Only when need to override, not right now
             // Any parameters we assign in emitParams will override the current system's when we call Emit.
             // Here we will override the start color and size.
-            var emitParams = new ParticleSystem.EmitParams
-            {
-                startColor = color,
-                startSize = size,
-                startLifetime = lifeTime,
+            //var emitParams = new ParticleSystem.EmitParams
+            //{
+            //    startColor = color,
+            //    startSize = size,
+            //    startLifetime = lifeTime,
 
-            };
-            system.Emit(emitParams, 10);
+            //};
+            system.Emit(emitCount);
 
         }
     }
