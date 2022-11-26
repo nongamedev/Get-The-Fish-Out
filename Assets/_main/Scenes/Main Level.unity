@@ -17004,14 +17004,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet Hell Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
-      propertyPath: colliderForce
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
-      propertyPath: layerToCollide.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
       propertyPath: m_RootOrder
       value: 10
