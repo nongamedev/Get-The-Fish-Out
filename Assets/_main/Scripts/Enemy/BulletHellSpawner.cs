@@ -27,7 +27,11 @@ public class BulletHellSpawner : MonoBehaviour
 
     [SerializeField] int animationCycleCount = 4;
 
-    int maxParticles = 9999999;
+    [SerializeField] private float colliderForce;
+
+    [SerializeField] LayerMask layerToCollide;
+
+    readonly int maxParticles = 9999999;
 
     private float angle;
 
@@ -83,6 +87,18 @@ public class BulletHellSpawner : MonoBehaviour
             {
                 texture.AddSprite(sprites[sprite]);
             }
+
+            var collision = system.collision;
+            collision.enabled = true;
+            collision.type = ParticleSystemCollisionType.World;
+            collision.mode = ParticleSystemCollisionMode.Collision2D;
+            collision.colliderForce = colliderForce;
+            collision.collidesWith = layerToCollide;
+
+            var trigger = system.trigger;
+            trigger.enabled = true;
+            trigger.enter = ParticleSystemOverlapAction.Callback;
+            trigger.inside = ParticleSystemOverlapAction.Kill;
         }
         // Every 2 secs we will emit.
         InvokeRepeating(nameof(DoEmit), 0f, bulletFireRate);
