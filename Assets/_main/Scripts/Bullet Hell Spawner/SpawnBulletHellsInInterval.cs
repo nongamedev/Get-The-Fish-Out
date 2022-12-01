@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class SpawnBulletHellsInInterval : MonoBehaviour
@@ -27,7 +25,6 @@ public class SpawnBulletHellsInInterval : MonoBehaviour
         while (true)
         {
 
-            yield return waitForTimer;
 
 
             for (int i = 0; i < bulletHellSpawners.Length; i++)
@@ -36,10 +33,9 @@ public class SpawnBulletHellsInInterval : MonoBehaviour
                 {
                 bulletHellSpawners[i].StopBulletHell();
                 }
-
-                if (i == currentIndex)
+                else
                 {
-                    bulletHellSpawners[i].ResumeBulletHell();
+                    bulletHellSpawners[i].StartBulletHell();
                 }
 
             }
@@ -50,6 +46,9 @@ public class SpawnBulletHellsInInterval : MonoBehaviour
             {
                 currentIndex = 0;
             }
+
+            yield return waitForTimer;
+
             //bulletHellSpawners[i].gameObject.SetActive(true);
 
             //bulletHellSpawners[i].GenerateBulletHell();

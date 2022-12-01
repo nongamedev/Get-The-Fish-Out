@@ -272,5 +272,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   timer: 2
-  playerTransform: {fileID: 0}
-  yOffset: 32
+  playerTransform: {fileID: 8487007606331273098, guid: 8c08996d15b3f634c9e5f1b2952552e1, type: 3}
+  yOffsetToPlayer: 25

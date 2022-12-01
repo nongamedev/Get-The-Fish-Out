@@ -1,0 +1,453 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1554212539366930066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554212539366930064}
+  - component: {fileID: 1554212539366930067}
+  - component: {fileID: 1554212539366930065}
+  m_Layer: 0
+  m_Name: Bullet Hell Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1554212539366930064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554212539366930066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1554212539551721503}
+  - {fileID: 7123063998566001104}
+  - {fileID: 7123064000380140585}
+  - {fileID: 7123063998904754453}
+  - {fileID: 7123063998975451677}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554212539366930067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554212539366930066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bb23c7c337af24db7a4604d42b5b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletHellSpawners:
+  - {fileID: 1554212539551721502}
+  - {fileID: 7123063998566001105}
+  - {fileID: 7123064000380140584}
+  - {fileID: 7123063998904754452}
+  - {fileID: 7123063998975451676}
+  timer: 10
+--- !u!114 &1554212539366930065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554212539366930066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc836381774e83f4482d5003dd42aaa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 25
+  playerTransform: {fileID: 0}
+--- !u!1001 &1554212537959370204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1554212539366930064}
+    m_Modifications:
+    - target: {fileID: 8596132428413202367, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_Name
+      value: Bullet Hell Spawner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: bulletHellSO
+      value: 
+      objectReference: {fileID: 11400000, guid: e1d1c96a31df0e442a21cdd5137fade0, type: 2}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+--- !u!4 &7123063998975451677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212537959370204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7123063998975451676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212537959370204}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334201b1e28fa844fa0b68bcdbe31cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1554212538032295636
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1554212539366930064}
+    m_Modifications:
+    - target: {fileID: 8596132428413202367, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_Name
+      value: Bullet Hell Spawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: bulletHellSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 92736f51d95ae16499e9d36fc108d77b, type: 2}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+--- !u!4 &7123063998904754453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212538032295636}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7123063998904754452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212538032295636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334201b1e28fa844fa0b68bcdbe31cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1554212538373015057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1554212539366930064}
+    m_Modifications:
+    - target: {fileID: 8596132428413202367, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_Name
+      value: Bullet Hell Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: bulletHellSO
+      value: 
+      objectReference: {fileID: 11400000, guid: e991c3518366fe54282885dcafca653d, type: 2}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+--- !u!4 &7123063998566001104 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212538373015057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7123063998566001105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212538373015057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334201b1e28fa844fa0b68bcdbe31cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1554212538702304232
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1554212539366930064}
+    m_Modifications:
+    - target: {fileID: 8596132428413202367, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_Name
+      value: Bullet Hell Spawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: bulletHellSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 95bbb0d05c306d94b81a7bdbf3a14bb5, type: 2}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+--- !u!4 &7123064000380140585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212538702304232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7123064000380140584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 1554212538702304232}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334201b1e28fa844fa0b68bcdbe31cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &7123063999468980190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1554212539366930064}
+    m_Modifications:
+    - target: {fileID: 8596132428413202367, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_Name
+      value: Bullet Hell Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+--- !u!4 &1554212539551721503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202369, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 7123063999468980190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1554212539551721502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+  m_PrefabInstance: {fileID: 7123063999468980190}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334201b1e28fa844fa0b68bcdbe31cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

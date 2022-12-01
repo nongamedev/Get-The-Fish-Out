@@ -77,15 +77,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  magnitude: 20.05
+  magnitude: 9
   roughness: 5
-  fadeInTime: 5
-  fadeOutTime: 1
+  fadeInTime: 0
+  fadeOutTime: 1.5
   DealDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: ffd161793a532dc4bae2fac753e16a25, type: 2}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+      - m_Target: {fileID: 4131131274434714954, guid: 8c08996d15b3f634c9e5f1b2952552e1, type: 3}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: TakeDamage
         m_Mode: 0
         m_Arguments:
@@ -96,7 +96,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  damage: 1
+  damage: 100
 --- !u!50 &3451893930583741649
 Rigidbody2D:
   serializedVersion: 4
@@ -216,4 +216,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b20a2ddb8bc0eb4b835739b8135bf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 6
+  timer: 8

@@ -207,6 +207,6 @@ MonoBehaviour:
   prefabs:
   - {fileID: 3451893930583741613, guid: d725071dc6d21ef4eb349ce541a4a7ef, type: 3}
   - {fileID: 5792266837209106424, guid: 47790e8a33d77114b86d01afb898079e, type: 3}
-  timer: 0.8
+  timer: 2.5
   playerTransform: {fileID: 0}
   yOffsetToPlayer: 35

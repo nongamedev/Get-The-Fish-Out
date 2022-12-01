@@ -25,9 +25,14 @@ public class BulletHellSO : ScriptableObject
 
     public int animationCycleCount = 4;
 
-    //public float colliderForce = 0;
+    public float colliderForce = 0;
 
-    //public LayerMask layerToCollide;
+    [Range(0, 2)] public float bounceForce = 0;
+
+    [Range(0, 1)] public float lifetimeLoss = 0;
+
+
+    public LayerMask layerToCollide;
 
     public float radial = 0;
 

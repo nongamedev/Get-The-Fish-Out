@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf67e529939878d409586f408ff23f8d, type: 3}
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
-  maxHealth: 5
-  currentHealth: 5
+  maxHealth: 1000
+  currentHealth: 1000
+  increaseAmountAfterDeath: 50

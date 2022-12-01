@@ -78,21 +78,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  magnitude: 10
-  roughness: 1
+  magnitude: 5
+  roughness: 5
   fadeInTime: 0
-  fadeOutTime: 5
+  fadeOutTime: 1.5
   DealDamage:
     m_PersistentCalls:
-      m_Calls: []
-  damage: 0
-  DoSomething:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
-        m_TargetAssemblyTypeName: BulletHellSpawner, Assembly-CSharp
-        m_MethodName: GenerateBulletHell
-        m_Mode: 1
+      - m_Target: {fileID: 4131131274434714954, guid: 8c08996d15b3f634c9e5f1b2952552e1, type: 3}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -101,6 +97,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damage: 80
 --- !u!50 &5792266837209106308
 Rigidbody2D:
   serializedVersion: 4
@@ -220,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b20a2ddb8bc0eb4b835739b8135bf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 6
+  timer: 8
 --- !u!1 &5806246258866579439
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,17 +266,26 @@ MonoBehaviour:
   Shake:
     m_PersistentCalls:
       m_Calls: []
-  magnitude: 0
-  roughness: 0
+  magnitude: 6
+  roughness: 5
   fadeInTime: 0
-  fadeOutTime: 0
+  fadeOutTime: 2
   DealDamage:
     m_PersistentCalls:
-      m_Calls: []
-  damage: 0
-  DoSomething:
-    m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4131131274434714954, guid: 8c08996d15b3f634c9e5f1b2952552e1, type: 3}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damage: 80
 --- !u!212 &8708313164134397380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -344,7 +350,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.023572959, y: -0.039344132}
+  m_Offset: {x: 0.02579964, y: -0.039344132}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -355,5 +361,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31214857, y: 0.33979183}
+  m_Size: {x: 0.29878855, y: 0.33979183}
   m_EdgeRadius: 0

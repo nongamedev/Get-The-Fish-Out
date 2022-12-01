@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Objects:
-  - Object: {fileID: 0}
+  - Object: {fileID: 3451893930583741613, guid: d725071dc6d21ef4eb349ce541a4a7ef, type: 3}
     Amount: 10
-  - Object: {fileID: 0}
+  - Object: {fileID: 5792266837209106424, guid: 47790e8a33d77114b86d01afb898079e, type: 3}
     Amount: 10
