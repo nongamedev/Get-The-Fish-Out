@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BulletHell_1
   m_EditorClassIdentifier: 
   emitCount: 1
-  numberOfColumns: 6
+  numberOfColumns: 2
   bulletFireRate: 1
   bulletSpinSpeed: 0.93
   bulletSpeed: 5

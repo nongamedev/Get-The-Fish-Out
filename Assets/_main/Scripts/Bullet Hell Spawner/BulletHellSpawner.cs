@@ -15,13 +15,16 @@ public class BulletHellSpawner : MonoBehaviour
 
     private float angle;
 
+    private bool stopBulletHell;
+
     private void Start()
     {
         waitForTimer = new WaitForSeconds(bulletHellSO.bulletFireRate);
+        GenerateBulletHell();
     }
-    private IEnumerator ActivateOnTimer()
+    private IEnumerator EmitBullets()
     {
-        while (true)
+        while (!stopBulletHell)
         {
             yield return waitForTimer;
             DoEmit();
@@ -32,7 +35,7 @@ public class BulletHellSpawner : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, 0, bulletHellSO.bulletSpinSpeed * Time.fixedTime);
     }
-    public void GenerateBulletHell()
+    private void GenerateBulletHell()
     {
         angle = 360 / bulletHellSO.numberOfColumns;
 
@@ -95,12 +98,12 @@ public class BulletHellSpawner : MonoBehaviour
                 texture.AddSprite(bulletHellSO.sprites[sprite]);
             }
 
-            ParticleSystem.CollisionModule collision = system.collision;
-            collision.enabled = true;
-            collision.type = ParticleSystemCollisionType.World;
-            collision.mode = ParticleSystemCollisionMode.Collision2D;
-            collision.colliderForce = bulletHellSO.colliderForce;
-            collision.collidesWith = bulletHellSO.layerToCollide;
+            //ParticleSystem.CollisionModule collision = system.collision;
+            //collision.enabled = true;
+            //collision.type = ParticleSystemCollisionType.World;
+            //collision.mode = ParticleSystemCollisionMode.Collision2D;
+            //collision.colliderForce = bulletHellSO.colliderForce;
+            //collision.collidesWith = bulletHellSO.layerToCollide;
 
             ParticleSystem.TriggerModule trigger = system.trigger;
             trigger.enabled = true;
@@ -109,9 +112,19 @@ public class BulletHellSpawner : MonoBehaviour
         }
         // Every 2 secs we will emit.
         //InvokeRepeating(nameof(DoEmit), 0f, bulletHellSO.bulletFireRate);
-        StartCoroutine(ActivateOnTimer());
+        StartCoroutine(EmitBullets());
     }
 
+    public void StopBulletHell()
+    {
+        stopBulletHell = true;
+    }
+
+    public void ResumeBulletHell()
+    {
+        stopBulletHell = false;
+        StartCoroutine(EmitBullets());
+    }
 
     void DoEmit()
     {

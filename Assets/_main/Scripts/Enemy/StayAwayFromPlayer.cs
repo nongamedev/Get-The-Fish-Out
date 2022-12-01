@@ -7,6 +7,6 @@ public class StayAwayFromPlayer : MonoBehaviour
 
     void Update()
     {
-        transform.SetPositionAndRotation(new Vector3(transform.position.x, playerTransform.position.y + yOffset, transform.position.z), Quaternion.identity);
+        transform.SetPositionAndRotation(new Vector3(transform.position.x, playerTransform.position.y + yOffset, 0/*transform.position.z*/), Quaternion.identity);
     }
 }

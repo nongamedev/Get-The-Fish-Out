@@ -9,9 +9,9 @@ public class SpawnBulletHellsInInterval : MonoBehaviour
 
     [SerializeField] float timer = 2f;
 
-    private int i = 0;
-
     private WaitForSeconds waitForTimer;
+
+    private int currentIndex;
 
     void Start()
     {
@@ -29,6 +29,27 @@ public class SpawnBulletHellsInInterval : MonoBehaviour
 
             yield return waitForTimer;
 
+
+            for (int i = 0; i < bulletHellSpawners.Length; i++)
+            {
+                if (i != currentIndex)
+                {
+                bulletHellSpawners[i].StopBulletHell();
+                }
+
+                if (i == currentIndex)
+                {
+                    bulletHellSpawners[i].ResumeBulletHell();
+                }
+
+            }
+
+            currentIndex++;
+
+            if (currentIndex >= bulletHellSpawners.Length)
+            {
+                currentIndex = 0;
+            }
             //bulletHellSpawners[i].gameObject.SetActive(true);
 
             //bulletHellSpawners[i].GenerateBulletHell();
