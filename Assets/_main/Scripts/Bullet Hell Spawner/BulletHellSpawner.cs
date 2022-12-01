@@ -18,7 +18,6 @@ public class BulletHellSpawner : MonoBehaviour
     private void Start()
     {
         waitForTimer = new WaitForSeconds(bulletHellSO.bulletFireRate);
-        GenerateBulletHell();
     }
     private IEnumerator ActivateOnTimer()
     {
@@ -33,7 +32,7 @@ public class BulletHellSpawner : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, 0, bulletHellSO.bulletSpinSpeed * Time.fixedTime);
     }
-    void GenerateBulletHell()
+    public void GenerateBulletHell()
     {
         angle = 360 / bulletHellSO.numberOfColumns;
 

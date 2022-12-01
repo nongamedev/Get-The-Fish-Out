@@ -63,12 +63,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf18ed860fb174409ec3b1571797188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTriggerEvent:
+  Shake:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
-        m_MethodName: Lose
+      - m_Target: {fileID: 2558982927139760523, guid: e32b25e72344d8b47a2a83e207ea20a1, type: 3}
+        m_TargetAssemblyTypeName: ShakeMachine, Assembly-CSharp
+        m_MethodName: ShakeOnce
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  magnitude: 10
+  roughness: 1
+  fadeInTime: 0
+  fadeOutTime: 5
+  DealDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  damage: 0
+  DoSomething:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8596132428413202368, guid: 56e8d1b86921e4c4fa8971882e740a1c, type: 3}
+        m_TargetAssemblyTypeName: BulletHellSpawner, Assembly-CSharp
+        m_MethodName: GenerateBulletHell
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -109,7 +132,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.074700914, y: 0.061422348}
@@ -243,21 +266,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf18ed860fb174409ec3b1571797188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTriggerEvent:
+  Shake:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
-        m_MethodName: Lose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  magnitude: 0
+  roughness: 0
+  fadeInTime: 0
+  fadeOutTime: 0
+  DealDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  damage: 0
+  DoSomething:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &8708313164134397380
 SpriteRenderer:
   m_ObjectHideFlags: 0

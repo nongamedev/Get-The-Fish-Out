@@ -62,13 +62,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf18ed860fb174409ec3b1571797188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTriggerEvent:
+  Shake:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
-        m_MethodName: Lose
-        m_Mode: 1
+      - m_Target: {fileID: 2558982927139760523, guid: e32b25e72344d8b47a2a83e207ea20a1, type: 3}
+        m_TargetAssemblyTypeName: ShakeMachine, Assembly-CSharp
+        m_MethodName: ShakeOnce
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -77,6 +77,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  magnitude: 20.05
+  roughness: 5
+  fadeInTime: 5
+  fadeOutTime: 1
+  DealDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ffd161793a532dc4bae2fac753e16a25, type: 2}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damage: 1
 --- !u!50 &3451893930583741649
 Rigidbody2D:
   serializedVersion: 4
@@ -108,7 +128,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00000039736432, y: -0.040800095}
